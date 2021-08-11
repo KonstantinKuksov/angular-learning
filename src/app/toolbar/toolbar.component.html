@@ -1,0 +1,11 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>Simple login app</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/">Home</button>
+    <button mat-button routerLink="/login" *ngIf="!appService.isAuthenticated">Login</button>
+    <button mat-button *ngIf="appService.isAuthenticated" (click)="appService.logout()">Logout</button>
+    <button mat-button routerLink="/profile">Profile</button>
+    <button mat-button routerLink="/dashboard">Dashboard</button>
+  </mat-toolbar>
+</p>
