@@ -4,7 +4,7 @@ import {Router} from "@angular/router";
 @Injectable({
   providedIn: 'root'
 })
-export class AppService {
+export class AuthService {
   adminLogin = 'admin';
   adminPassword = '1234';
 
