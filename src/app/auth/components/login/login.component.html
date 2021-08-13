@@ -3,13 +3,13 @@
   <p>
     <mat-form-field class="form-field" appearance="fill">
       <mat-label>Login</mat-label>
-      <input matInput type="text" [(ngModel)]="appService.login">
+      <input matInput type="text" [(ngModel)]="appService.login" />
     </mat-form-field>
   </p>
   <p>
     <mat-form-field class="form-field" appearance="fill">
       <mat-label>Password</mat-label>
-      <input matInput type="password" [(ngModel)]="appService.password">
+      <input matInput type="password" [(ngModel)]="appService.password" />
     </mat-form-field>
   </p>
   <p class="mat-error" *ngIf="appService.showError">
@@ -18,5 +18,4 @@
   <p>
     <button mat-raised-button (click)="appService.checkAdmin()">Confirm</button>
   </p>
-
 </div>

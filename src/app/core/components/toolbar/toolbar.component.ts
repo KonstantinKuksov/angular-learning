@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AuthService} from "../../../auth/services/auth.service";
+import { AuthService } from '../../../auth/services/auth.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,7 +7,5 @@ import {AuthService} from "../../../auth/services/auth.service";
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent {
-
   constructor(public appService: AuthService) {}
-
 }

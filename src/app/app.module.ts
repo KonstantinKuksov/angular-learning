@@ -5,15 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Error404Component } from './error404-page/error404.component';
 import { HomeComponent } from './home-page/home.component';
-import { CoreModule } from "./core/core.module";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    Error404Component,
-    HomeComponent,
-  ],
+  declarations: [AppComponent, Error404Component, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -21,6 +17,6 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     CoreModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

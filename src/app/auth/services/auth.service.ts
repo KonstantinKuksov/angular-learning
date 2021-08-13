@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {Router} from "@angular/router";
+import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   adminLogin = 'admin';
@@ -14,10 +14,11 @@ export class AuthService {
   isAuthenticated = false;
   showError = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   checkAdmin() {
-    this.isAuthenticated = this.adminLogin === this.login && this.adminPassword === this.password;
+    this.isAuthenticated =
+      this.adminLogin === this.login && this.adminPassword === this.password;
     if (this.isAuthenticated) {
       this.showError = false;
       this.login = '';
@@ -31,5 +32,4 @@ export class AuthService {
   logout() {
     this.isAuthenticated = false;
   }
-
 }
