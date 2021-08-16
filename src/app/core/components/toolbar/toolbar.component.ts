@@ -7,5 +7,5 @@ import { AuthService } from '../../../auth/services/auth.service';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent {
-  constructor(public appService: AuthService) {}
+  constructor(public authService: AuthService) {}
 }

@@ -4,7 +4,6 @@ import { LoginComponent } from './auth/components/login/login.component';
 import { Error404Component } from './error404-page/error404.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './home-page/home.component';
-import { Error401Component } from './auth/components/error401/error401.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +20,6 @@ const routes: Routes = [
       import('./profile/profile.module').then((m) => m.ProfileModule),
     canActivate: [AuthGuard],
   },
-  { path: '401', component: Error401Component },
   { path: '**', component: Error404Component },
 ];
 

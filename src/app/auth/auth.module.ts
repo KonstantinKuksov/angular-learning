@@ -1,24 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {AuthService} from "./services/auth.service";
-import {LoginComponent} from "./components/login/login.component";
-import {Error401Component} from "./components/error401/error401.component";
-import {MatInputModule} from "@angular/material/input";
-import {MatIconModule} from "@angular/material/icon";
-import {FormsModule} from "@angular/forms";
-import {MatButtonModule} from "@angular/material/button";
-import {AppRoutingModule} from "../app-routing.module";
-
-
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './components/login/login.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    Error401Component,
-  ],
-  providers: [
-    AuthService
-  ],
+  declarations: [LoginComponent],
+  providers: [AuthService],
   imports: [
     CommonModule,
     MatInputModule,
@@ -26,6 +18,6 @@ import {AppRoutingModule} from "../app-routing.module";
     FormsModule,
     MatButtonModule,
     AppRoutingModule,
-  ]
+  ],
 })
-export class AuthModule { }
+export class AuthModule {}
