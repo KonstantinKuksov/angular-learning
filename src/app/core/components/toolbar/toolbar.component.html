@@ -1,6 +1,10 @@
 <p>
   <mat-toolbar color="primary">
-    <span>Simple login app</span>
+    <span>Angular learning</span>
+    <span class="spacer"></span>
+    <button mat-button (click)="decrease()">Decrease</button>
+    <span>{{counter}}</span>
+    <button mat-button (click)="increase()">Increase</button>
     <span class="spacer"></span>
     <button mat-button routerLink="/">Home</button>
     <button mat-button routerLink="/login" *ngIf="!authService.isAuthenticated">Login</button>
