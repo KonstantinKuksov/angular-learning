@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../../auth/services/auth.service';
-import {Subject, Subscription} from "rxjs";
+import { BehaviorSubject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,10 +8,9 @@ import {Subject, Subscription} from "rxjs";
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent {
-
   counter: number = 0;
   sub: Subscription;
-  count$: Subject<number> = new Subject<number>();
+  count$: BehaviorSubject<number> = new BehaviorSubject<number>(this.counter);
 
   constructor(public authService: AuthService) {
     this.sub = this.count$.subscribe();

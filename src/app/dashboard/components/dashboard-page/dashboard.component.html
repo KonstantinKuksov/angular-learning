@@ -1,1 +1,6 @@
 <h1>Dashboard</h1>
+<mat-form-field class="form-field" style="border-color: {{color}}" appearance="fill">
+  <mat-label>Print something</mat-label>
+  <input matInput type="text" [(ngModel)]="text"/>
+</mat-form-field>
+<app-dashboard-article [text]="text" (inputBorderColorEvent)="changeBorderColor($event)" ></app-dashboard-article>
